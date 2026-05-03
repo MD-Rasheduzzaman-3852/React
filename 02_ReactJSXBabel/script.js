@@ -56,9 +56,9 @@ function IsPurses(courses){
 let parses= IsPurses(courses);
 body.render(parses); */ 
 
-const root=ReactDOM.createRoot(document.querySelector("body"));
+//const root=ReactDOM.createRoot(document.querySelector("body"));
 
-function App(props){
+/* function App(props){
     return(
         <h1 style={props.style}>Hello {props.name}.{props.age<18?"You are not eligible for vote":"You are eligible for vote"} </h1>
     );
@@ -69,4 +69,32 @@ let a={background:"pink"
 }
 const value=<App name="Rahat" age={23} style={a}></App>
 
-root.render(value);
+root.render(value); */
+
+function Header({name}){
+    return(
+        <h1>Hello {name} </h1>
+    );
+}
+function Body({age}){
+    return(
+        <h2>{age>=18?"You are eligible for vote":"You are not eligible"}</h2>
+    )
+}
+function Footer({name}){
+    return(
+        <h3>{name}, thanks for visiting us!!</h3>
+    )
+}
+function Main(){
+    return(
+        <>
+        <Header name={"MD. Rahat"} age={23}></Header>
+        <Body name={"MD. Rahat"} age={23}></Body>
+        <Footer name={"MD. Rahat"} age={23}></Footer>
+        </>
+    )
+}
+
+const root=ReactDOM.createRoot(document.querySelector("body"));
+root.render(<Main></Main>)
