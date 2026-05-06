@@ -71,7 +71,7 @@ const value=<App name="Rahat" age={23} style={a}></App>
 
 root.render(value); */
 
-function Header({name}){
+/* function Header({name}){
     return(
         <h1>Hello {name} </h1>
     );
@@ -97,4 +97,6 @@ function Main(){
 }
 
 const root=ReactDOM.createRoot(document.querySelector("body"));
-root.render(<Main></Main>)
+root.render(<Main></Main>) */
+
+console.log("Hello World!!");
